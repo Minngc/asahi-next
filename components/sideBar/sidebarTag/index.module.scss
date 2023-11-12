@@ -1,0 +1,32 @@
+.tag {
+  width: 100%;
+  .tagTitle {
+    a {
+      color: var(--color-regular);
+      font-size: 1rem;
+      text-decoration: none;
+      &:hover {
+        color: var(--color-special-havien);
+      }
+    }
+  }
+  .tagList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    padding: 2px 8px;
+
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    .tagItem {
+      display: inline-block;
+
+      color: var(--color-lighten);
+      text-decoration: none;
+      &:hover {
+        color: var(--color-special-havien);
+      }
+    }
+  }
+}

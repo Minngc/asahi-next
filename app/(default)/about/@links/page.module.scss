@@ -1,0 +1,34 @@
+.friendLink_container {
+  width: calc(100% - 20px);
+  max-width: 880px;
+  padding: 10px;
+  border-radius: 10px;
+
+  background-color: var(--color-background-fronter);
+  box-shadow: var(--shadow-regular);
+}
+
+.friendLink_title {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  font-weight: bold;
+  font-size: 1.5rem;
+  &::after {
+    display: block;
+    width: 100%;
+    height: 1px;
+
+    background-color: var(--color-lightest);
+
+    content: "";
+  }
+}
+
+.friendLink_linkList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px;
+}

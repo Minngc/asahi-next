@@ -1,0 +1,23 @@
+[
+  {
+    "year": "2023",
+    "month": "11",
+    "fileName": "dev.md",
+    "data": {
+      "author": "Ming",
+      "date": "Nev 12, 2023",
+      "title": "开发文档",
+      "link": "devlog",
+      "tag": [
+        "guide",
+        "doc",
+        "pub"
+      ],
+      "description": "朝日，基于 Next.js 所开发的博客系统。本文记录本博客的开发文档，并作为文章展示的测试样例。",
+      "cover": [
+        "",
+        ""
+      ]
+    }
+  }
+]
