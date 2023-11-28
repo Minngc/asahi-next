@@ -21,10 +21,12 @@
     height: 50vh;
     .imageContainer {
       position: relative;
+
       width: 100%;
       height: 100%;
       .imgCover {
         position: absolute;
+
         max-width: 100%;
         height: 100%;
         object-fit: cover;
@@ -61,11 +63,13 @@ html .header .backImage .imageContainer {
   .darkCover {
     visibility: hidden;
     opacity: 0;
+
     transition: opacity 0.2s 0s, visibility 0s 0.2s;
   }
   .lightCover {
     visibility: visible;
     opacity: 1;
+
     transition: opacity 0.2s 0s, visibility 0s 0s;
   }
 }
@@ -74,11 +78,13 @@ html[data-theme="dark"] .header .backImage .imageContainer {
   .darkCover {
     visibility: visible;
     opacity: 1;
+
     transition: opacity 0.2s 0s, visibility 0s 0s;
   }
   .lightCover {
     visibility: hidden;
     opacity: 0;
+
     transition: opacity 0.2s 0s, visibility 0s 0.2s;
   }
 }

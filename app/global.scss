@@ -3,9 +3,8 @@
 @use "/styles/dark-mode.scss";
 @use "/styles/default-mode.scss";
 @use "/styles/artcile-element.scss";
-/*
- @use "/styles/fonts/lxgw.scss";
-*/
+@import url("https://cdn.jsdelivr.net/gh/Minngc/lxgw-wenkai-webfonts@master/index.css");
+
 html {
   scroll-padding-top: 80px;
   scroll-behavior: smooth;
@@ -27,6 +26,7 @@ body {
 
   color: var(--color-regular);
   font-family: "LXGW WenKai";
+
   background-color: var(--color-background-regular);
 }
 

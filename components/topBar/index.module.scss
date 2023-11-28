@@ -169,6 +169,18 @@ html[data-theme="dark"] .topBarContainer {
   }
 }
 
+.menuMask {
+  @media screen and (max-width: 576px) {
+    position: fixed;
+    top: var(--topbar-height);
+
+    width: 100vw;
+    height: 100vh;
+
+    backdrop-filter: blur(3px);
+  }
+}
+
 li.spliteLine span{
   background-color: var(--color-lightest);
 }
@@ -176,7 +188,7 @@ li.spliteLine span{
 /*
   Menu Icon
 */
-.menuHidden {
+div.menuHidden {
   @media screen and (min-width: 576.1px) {
     display: none;
   }

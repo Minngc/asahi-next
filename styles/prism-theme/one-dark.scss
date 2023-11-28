@@ -27,12 +27,19 @@
  * --syntax-gutter-background-color-selected: hsl(220, 13%, 26%);
  * --syntax-cursor-line: hsla(220, 100%, 80%, 0.04);
  */
-html[data-theme="dark"] {
+ html[data-theme="dark"] {
+  code[class*="language-"] {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    overflow: auto;
+  }
+
   code[class*="language-"],
   pre[class*="language-"] {
     color: hsl(220, 14%, 71%);
-    font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono",
-      monospace;
+    font-family: "Consolas", "LXGW WenKai Mono", "Bitstream Vera Sans Mono",
+      "Courier New";
     line-height: 1.5;
     direction: ltr;
     white-space: pre;
@@ -83,15 +90,17 @@ html[data-theme="dark"] {
   /* Code blocks */
   pre[class*="language-"] {
     margin: 0.5em 1.625rem;
-    padding: 1em;
+    padding: 1em 1rem 0.25rem;
     border-radius: 0.3rem;
-    overflow: auto;
   }
 
   /* Inline code */
   :not(pre) > code[class*="language-"] {
+    display: inline-block;
+    width: 100%;
     padding: 0.2em 0.3em;
     border-radius: 0.3rem;
+    overflow: auto;
 
     white-space: normal;
   }

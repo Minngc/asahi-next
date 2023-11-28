@@ -109,11 +109,14 @@
 .article-ele-del {
   display: inline;
 
+  color: rgb(20, 20, 20);
+
   line-height: 1rem;
   text-decoration: none;
+
   background-color: rgb(20, 20, 20);
-  color: rgb(20, 20, 20);
   cursor: pointer;
+
   transition: color 0.2s;
   &:hover {
     color: rgba(255, 255, 255);
@@ -181,6 +184,7 @@
 pre::-webkit-scrollbar-thumb {
   margin: 2px;
   border-radius: 0.3em;
+
   background: var(--color-webkit-thumb);
 }
 
@@ -195,6 +199,8 @@ html[data-theme="dark"],
 html {
   pre[class*="language"].language-type-position {
     position: relative;
+
+    width: calc(100% - 4.35rem);
 
     padding-top: 2.5rem;
   }
@@ -241,6 +247,7 @@ div.language-type {
 
   color: var(--color-font_code);
   font-size: 1rem;
+  font-family: "Consolas", "LXGW WenKai Mono";
 
   background: var(--color-background_code);
 }
@@ -255,16 +262,18 @@ div.language-type {
 
 .article-ele-p:has(.article-ele-img) {
   display: flex;
-  padding: 0 26px;
-  width: calc(100% - 52px);
   justify-content: center;
+  width: calc(100% - 52px);
+  padding: 0 26px;
 }
 
 .article-ele-img {
-  cursor: pointer;
   position: static !important;
+
   display: block !important;
   width: 100% !important;
   max-width: 900px;
   object-fit: contain;
+
+  cursor: pointer;
 }

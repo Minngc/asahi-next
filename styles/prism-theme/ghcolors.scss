@@ -3,11 +3,19 @@
  * Inspired by Github syntax coloring
  */
 
+ code[class*="language-"] {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  overflow: auto;
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
   color: #393a34;
   font-size: 1rem;
-  font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  font-family: "Consolas", "LXGW WenKai Mono", "Bitstream Vera Sans Mono",
+    "Courier New", Courier, monospace;
   line-height: 1.5rem;
   direction: ltr;
   white-space: pre;
@@ -46,9 +54,8 @@ code[class*="language-"] ::selection {
 /* Code blocks */
 pre[class*="language-"] {
   margin: 0.5rem 1.625rem 0.5em 1.625rem;
-  padding: 1em;
+  padding: 1rem 1rem 0.25rem;
   border-radius: 0.3rem;
-  overflow: auto;
 
   background-color: white;
   /*

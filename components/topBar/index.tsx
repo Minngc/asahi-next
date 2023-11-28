@@ -1,6 +1,5 @@
 "use client";
 
-// import { luxuriousScript } from "public/fonts";
 import classNames from "classnames";
 import styles from "./index.module.scss";
 import { useState } from "react";
@@ -21,13 +20,11 @@ const TopBar = (props: { menuList: { href: string; name: string }[] }) => {
     <>
       <div className={classNames([styles.des])} />
       <div className={classNames([styles.topBarContainer])}>
-        <Link
+      <Link
           href={"/home"}
-          className={classNames(
-            LocalLuxuriousScript.variable,
-            //luxuriousScript.variable,
-            [styles.topBarTitle]
-          )}
+          className={classNames(LocalLuxuriousScript.variable, [
+            styles.topBarTitle,
+          ])}
         >
           {"Ming's Blog"}
         </Link>
