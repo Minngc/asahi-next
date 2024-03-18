@@ -31,7 +31,7 @@
 
 ### 博客主题色
 
-在亮色模式下，选择偏蓝的水雾色(#F6F8FA)作为网页背景色，以纯白作为卡片的背景色。选择[瓶覗](https://color-term.com/color/kamenozoki-a5dee4/)和[云水蓝](https://color-term.com/color/yunshuilan-baccd9/)的混合色来分隔正文与顶部菜单栏。
+在亮色模式下，选择偏蓝的水雾色(#F6F8FA)作为网页背景色，以纯白作为卡片的背景色。选择 [瓶覗](https://color-term.com/color/kamenozoki-a5dee4/) 和 [云水蓝](https://color-term.com/color/yunshuilan-baccd9/) 的混合色来分隔正文与顶部菜单栏。
 
 暗色模式下下则选择以不同灰度的黑色来作为主题色。
 
@@ -198,10 +198,10 @@ Description: "" # 字符串，文章描述，可缺省
 
 ### 部署
 
-项目暂未配置 Github Action ，因此需要手动部署。
+项目暂未配置 Github Action，因此需要手动部署。
 
 ## 二次开发
 
-本项目页面主要内容基本都拆分为组件，使用 Css Module 指定样式，并且将配色、文章渲染相关样式放置在 `/styles` 目录下，只需替换原有组件与样式即可。
+本项目页面主要内容基本都拆分为组件，使用 CSS Module 指定样式，并且将配色、文章渲染相关样式放置在 `/styles` 目录下，只需替换原有组件与样式即可。
 
 最后，由衷感谢您的浏览，欢迎提出修改意见。

@@ -8,8 +8,19 @@ import articles from "@/external/config/articles.json";
 import { ReadonlyURLSearchParams, useSearchParams } from "next/navigation";
 import tagList from "@/external//config/tagList.json";
 import { searchParamsFilterFunc } from "@/util/func";
+import { Suspense } from "react";
 
 const Post = () => {
+  return (
+    <Suspense>
+      <SearchBar />
+    </Suspense>
+  );
+};
+
+export default Post;
+
+const SearchBar = () => {
   const searchParams =
     useSearchParams() ?? new ReadonlyURLSearchParams(new URLSearchParams());
 
@@ -44,5 +55,3 @@ const Post = () => {
     </>
   );
 };
-
-export default Post;
