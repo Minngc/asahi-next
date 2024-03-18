@@ -18,6 +18,9 @@
   border: none;
 
   line-height: 36px;
+  .article-ele-anchor::before {
+    content: "";
+  }
   &::after {
     display: block;
     width: 100%;
@@ -34,6 +37,10 @@
 .article-ele-h3 {
   font-size: 1.2em;
   text-indent: 0.2em;
+
+  .article-ele-anchor::before {
+    content: "";
+  }
 }
 
 .article-ele-h4 {
@@ -247,7 +254,7 @@ div.language-type {
 
   color: var(--color-font_code);
   font-size: 1rem;
-  font-family: "Consolas", "LXGW WenKai Mono";
+  font-family: "Consolas", "LXGW WenKai Mono", monospace;
 
   background: var(--color-background_code);
 }
@@ -276,4 +283,11 @@ div.language-type {
   object-fit: contain;
 
   cursor: pointer;
+}
+
+.article-ele-code {
+  padding: 0px 2px;
+  border: 0.2px solid var(--color-border);
+
+  background-color: var(--color-background-code);
 }

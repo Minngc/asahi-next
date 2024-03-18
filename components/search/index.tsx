@@ -1,11 +1,12 @@
 import classNames from "classnames";
 import styles from "./index.module.scss";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import searchIcon from "public/svg/searchIcon.svg";
 import Image from "next/image";
 import { SearchIcon } from "../icons";
 import { SearchMenuIcon } from "../icons";
+import { computedDataWithUnit } from "@/util/func/computedNumber";
 
 function repalce(
   currentPrama: string,
@@ -45,7 +46,7 @@ const Search = (props: {
     filterData: { years, classes },
   } = props;
   const router = useRouter();
-  const [expand, setExpand] = useState(false);
+  const [fold, setFold] = useState(true);
   const [state, setState] = useState(searchData);
   let urlArray: string[] = [];
   if (state.searchTitle) urlArray.push("title=" + state.searchTitle);
@@ -53,6 +54,49 @@ const Search = (props: {
   if (state.searchClass) urlArray.push("class=" + state.searchClass);
   const searchPramas = urlArray.join("&");
 
+  const searchPanelRef = useRef<HTMLDivElement>(null);
+  const searchPanelHeight = useRef<string>();
+  const searchPanelContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleHeight() {
+      const styles =
+        searchPanelRef.current && getComputedStyle(searchPanelRef.current);
+      const currentHeight = computedDataWithUnit(
+        "px",
+        styles?.height,
+        styles?.paddingTop,
+        styles?.paddingBottom
+        // styles?.marginTop,
+        // styles?.marginBottom
+      );
+      if (currentHeight === searchPanelHeight.current) {
+        return;
+      }
+      searchPanelHeight.current = currentHeight;
+      if (fold === false && searchPanelContainerRef.current) {
+        searchPanelContainerRef.current.style.height =
+          searchPanelHeight.current;
+      }
+    }
+    handleHeight();
+
+    window.addEventListener("resize", handleHeight);
+    return () => {
+      window.removeEventListener("resize", handleHeight);
+    };
+  }, [fold]);
+
+  useEffect(() => {
+    if (searchPanelContainerRef.current && searchPanelHeight.current) {
+      if (fold === true) {
+        searchPanelContainerRef.current.style.height = "0px";
+      } else {
+        searchPanelContainerRef.current.style.height =
+          searchPanelHeight.current;
+      }
+    }
+  }, [fold]);
   return (
     <>
       <div className={classNames(styles.container)}>
@@ -78,53 +122,65 @@ const Search = (props: {
         </button>
         <div
           onClick={() => {
-            setExpand((pre) => !pre);
+            setFold((pre) => !pre);
           }}
           className={classNames(styles.expend)}
         >
           <SearchMenuIcon />
         </div>
       </div>
-      {expand && (
-        <div className={classNames(styles.filterPanel)}>
-          <div className={classNames(styles.filterLine)}>
-            <div className={classNames(styles.filterTitle)}>年份</div>
-            <Item
-              listKey="year"
-              searchParams={searchPramas}
-              current={state.searchYear}
-              items={years}
-              onClick={(value: string | null) => {
-                setState((pre) => {
-                  const a = { ...pre };
-                  a.searchYear = value;
-                  return a;
-                });
-              }}
-            />
+      <div
+        className={classNames(styles.filterPanelContainer)}
+        ref={searchPanelContainerRef}
+      >
+        {
+          // Display Panel
+          <div
+            ref={searchPanelRef}
+            className={classNames(styles.filterPanel, {
+              [styles.filterPanelHidden]: fold,
+            })}
+          >
+            <div className={classNames(styles.filterLine)}>
+              <div className={classNames(styles.filterTitle)}>年份</div>
+              <Item
+                listKey="year"
+                searchParams={searchPramas}
+                current={state.searchYear}
+                items={years}
+                onClick={(value: string | null) => {
+                  setState((pre) => {
+                    const a = { ...pre };
+                    a.searchYear = value;
+                    return a;
+                  });
+                }}
+              />
+            </div>
+            <div className={classNames(styles.filterLine)}>
+              <div className={classNames(styles.filterTitle)}>分类</div>
+              <Item
+                listKey="class"
+                searchParams={searchPramas}
+                current={state.searchClass}
+                items={classes}
+                onClick={(value: string | null) => {
+                  setState((pre) => {
+                    const a = { ...pre };
+                    a.searchClass = value;
+                    return a;
+                  });
+                }}
+              />
+            </div>
           </div>
-          <div className={classNames(styles.filterLine)}>
-            <div className={classNames(styles.filterTitle)}>分类</div>
-            <Item
-              listKey="class"
-              searchParams={searchPramas}
-              current={state.searchClass}
-              items={classes}
-              onClick={(value: string | null) => {
-                setState((pre) => {
-                  const a = { ...pre };
-                  a.searchClass = value;
-                  return a;
-                });
-              }}
-            />
-          </div>
-        </div>
-      )}
+        }
+      </div>
     </>
   );
 };
 
+// 展开的快捷索引的「项」
 const Item = (props: {
   listKey: string;
   searchParams: string;

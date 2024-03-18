@@ -5,7 +5,8 @@ html[data-theme="dark"]:root {
   --color-background-fronter: rgb(31, 31, 31);
   --color-background-hover: rgba(255, 255, 255, 0.3);
   --color-background-tablerow: rgb(22, 24, 26);
-  --color-border: rgb(47, 49, 54);
+  --color-background-code: rgb(47,51,60);
+  --color-border: rgb(42, 50, 52);
   --shadow-regular: none;
   --shadow-lighten: none;
   --color-background-avatar: linear-gradient(
@@ -25,7 +26,7 @@ html[data-theme="dark"]:root {
   --color-input-hover: rgba(255, 255, 255, 0.87);
   --color-background-fronter-control: rgba(43, 43, 43, 1);
   --color-background-languagetype: rgba(40, 44, 52);
-  --color-aboveImage:rgba(255, 255, 255, 0.87);
+  --color-aboveImage: rgba(255, 255, 255, 0.87);
 
   --color-index: rgb(99, 92, 80);
 }
