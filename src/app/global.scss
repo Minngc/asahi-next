@@ -1,0 +1,44 @@
+@use "/src/styles/prism-theme/ghcolors.scss";
+@use "/src/styles/prism-theme/one-dark.scss";
+@use "/src/styles/dark-mode.scss";
+@use "/src/styles/default-mode.scss";
+@use "/src/styles/artcile-element.scss";
+@import url("https://cdn.jsdelivr.net/gh/Minngc/lxgw-wenkai-webfonts@master/index.css");
+
+html {
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+
+  transition: background 0.2s;
+}
+
+html:root {
+  --topbar-height: 65px;
+  @media screen and (max-width: 576px) {
+    --topbar-height: 48px;
+  }
+  @media screen and (max-width: 992px) {
+    --topbar-height: 55px;
+  }
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+
+  color: var(--color-regular);
+  font-family: "LXGW WenKai", "Segoe UI", sans-serif;
+
+  background-color: var(--color-background-regular);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+
+  background-color: transparent;
+}
+
+svg path {
+  fill: var(--color-regular);
+}

@@ -2,7 +2,7 @@ import fs from "node:fs";
 import matter from "gray-matter";
 import tagTrans from "./external/config/article-replace/tagTrans.json"  assert { type: "json" };
 import basicInfo from "./external/config/pages-config/basic.json"  assert { type: "json" };
-import { generateCover,generateTag,datetrans, generateDescription} from "./util/func/index.ts";
+import { generateCover,generateTag,datetrans, generateDescription} from "./src/util/func/index.ts";
 
 console.log("--- on running ---");
 

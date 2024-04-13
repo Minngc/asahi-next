@@ -1,0 +1,35 @@
+html[data-theme="dark"]:root {
+  --color-webkit-thumb: rgb(45, 39, 39);
+  --color-webkit-thumb-hover: rgb(165, 165, 165);
+  --color-background-regular: rgb(31, 31, 31);
+  --color-background-fronter: rgb(42, 42, 42);
+  --color-background-hover: rgba(255, 255, 255, 0.3);
+  --color-background-tablerow: rgb(43, 46, 50);
+  --color-background-code: rgb(47,51,60);
+  --color-background-input: rgb(61, 66, 67);
+  --color-border: rgb(42, 50, 52);
+  --shadow-regular: none;
+  --shadow-lighten: none;
+  --color-background-avatar: rgb(47, 55, 71);
+  --color-link: rgb(46, 169, 223);
+  --color-link-hover: rgb(130, 130, 130);
+  --shadow-regular: 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+  --shadow-lighten: none;
+  --color-special-havien: rgba(0, 92, 175, 0.5);
+  --color-special-lighten: rgba(17, 50, 133, 0.5);
+  --color-regular: rgb(225, 225, 225);
+  --color-lighten: rgb(165, 165, 165);
+  --color-lightest: rgba(255, 255, 255, 0.3);
+  --color-input-hover: rgba(255, 255, 255, 0.87);
+  --color-background-fronter-control: rgb(42, 42, 42);;
+  --color-background-languagetype: rgba(40, 44, 52);
+  --color-aboveImage: rgba(255, 255, 255, 0.87);
+
+  --color-index: rgb(99, 92, 80);
+}
+
+html[data-theme="dark"] {
+  img {
+    filter: saturate(1.25) brightness(0.8);
+  }
+}

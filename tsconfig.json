@@ -23,9 +23,10 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@components/*": ["./components/*"],
-      "@public/*": ["./public/*"]
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@public/*": ["./public/*"],
+      "@external/*":["./external/*"]
     },
     "plugins": [
       {
@@ -39,6 +40,6 @@
     "**/*.tsx",
     "next.config.js",
     ".next/types/**/*.ts"
-  ],
+, "script.mjs"  ],
   "exclude": ["node_modules"]
 }

@@ -43,7 +43,7 @@
 
 ## 项目结构
 
-本项目采用 [Nextjs | App Router](https://nextjs.org/docs/app) 作为文件组织形式，并且未使用 `src` 文件夹。
+本项目采用 [Nextjs | App Router](https://nextjs.org/docs/app) 作为文件组织形式，并使用 `src` 文件夹。
 
 ```txt
 ├── app # 项目源码
