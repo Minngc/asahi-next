@@ -19,7 +19,7 @@ Description: 朝日，基于 Next.js 所开发的博客系统。本文记录本�
 
 ### 已知问题
 
-问题待发掘。
+- [ ] Next.js 在 14.2 版本更新了 serialize 和 MDXRemote 的行为，现版本方式将会被舍弃，需要切换新的 Markdown 渲染方式。
 
 ### TODO
 
