@@ -1,10 +1,11 @@
 import classNames from "classnames";
 import { ReactNode } from "react";
-import styles from "./page.module.scss";
 import { generateArticleData } from "@/util/func/dataGenerate";
 import { ArticleHeader } from "@/components/article/articleHeader";
-
+import { PostIndex } from "@/components/postIndex";
+import { MenuControl } from "../menucontrol";
 type ArticlePath = [year: string, month: string, title: string];
+import styles from "./page.module.scss";
 
 const ArticleLayout = async (props: {
   children: ReactNode;
@@ -32,12 +33,12 @@ const ArticleLayout = async (props: {
           )}
           {children}
         </article>
-        <aside className={classNames(styles.index)}>{index}</aside>
+        <MenuControl>
+          <PostIndex>{index}</PostIndex>
+        </MenuControl>
       </main>
     </>
   );
 };
-
-
 
 export default ArticleLayout;

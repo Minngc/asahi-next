@@ -1,0 +1,29 @@
+.menu_control_button {
+  position: fixed;
+  right: 60px;
+  bottom: 85px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+
+  height: 35px;
+  border-radius: 0.3rem;
+
+  background-color: var(--color-background-fronter-control);
+  box-shadow: var(--shadow-regular);
+  visibility: visible;
+
+  cursor: pointer;
+
+  opacity: 1;
+
+  transition: opacity 0.5s 0s, visibility 0s 0s;
+  @media screen and (max-width: 992px) {
+    visibility: hidden;
+    opacity: 0;
+
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  }
+}

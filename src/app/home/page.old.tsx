@@ -1,3 +1,5 @@
+"use client"
+
 import { ArticleCard } from "@/components/article/articleCard";
 import articles from "@external/config/articles.json";
 

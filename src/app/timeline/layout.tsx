@@ -9,7 +9,6 @@ const Layout = (props: { children: ReactNode; sidebar: ReactNode }) => {
       <div className={styles.topbar} />
       <div className={classNames(styles.timeLine)}>
         {children}
-
       </div>
     </>
   );

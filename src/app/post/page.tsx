@@ -9,10 +9,11 @@ import { ReadonlyURLSearchParams, useSearchParams } from "next/navigation";
 import tagList from "@external//config/tagList.json";
 import { searchParamsFilterFunc } from "@/util/func";
 import { Suspense } from "react";
+import { HomeLoading } from "@/components/loading";
 
 const Post = () => {
   return (
-    <Suspense>
+    <Suspense fallback={<HomeLoading />}>
       <SearchBar />
     </Suspense>
   );

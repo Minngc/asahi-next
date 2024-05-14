@@ -1,0 +1,38 @@
+.index {
+  position: sticky;
+  top: calc(var(--topbar-height) + 10px);
+
+  flex: none;
+  width: 230px;
+  height: fit-content;
+  max-height: max(60vh, 300px);
+  margin-top: 10px;
+  padding: 5px;
+  overflow: hidden;
+
+  opacity: 1;
+
+  transition: opacity 0.5s, transform 0.5s, width 0.5s, visibility 0s 0s;
+
+  &.hidden {
+    width: 0;
+
+    transform: translate3D(100px, 0, 0);
+    visibility: hidden;
+    opacity: 0;
+
+    transition: opacity 0.5s, width 0.5s 0s, transform 0.5s, visibility 0s 0.5s;
+  }
+
+  @media screen and (max-width: 992px) {
+    position: static;
+
+    display: none;
+
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+

@@ -1,11 +1,6 @@
 import { ReactNode } from "react";
-
 const ArticleLayout = ({ children }: { children: ReactNode }) => {
-  return (
-    <>
-        {children}
-    </>
-  );
+  return <>{children}</>;
 };
 
 export default ArticleLayout;

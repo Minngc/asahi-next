@@ -2,6 +2,7 @@ import article from "@external/config/articles.json";
 import { ArticleRemote } from "@/components/article/articleRemote";
 type ArticlePath = [year: string, month: string, title: string];
 import { generateArticleData } from "@/util/func/dataGenerate";
+import styles from "./page.module.scss";
 
 const Article = async (props: { params: { slug: ArticlePath } }) => {
   const {
@@ -21,6 +22,6 @@ export default Article;
 
 export async function generateStaticParams() {
   return article.map(({ year, month, data }) => {
-    return { slug: [year, month, data.link] };
+    return { slug: [year, month, data.link], fallback: false };
   });
 }

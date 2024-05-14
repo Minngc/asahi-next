@@ -1,8 +1,6 @@
-
-
 .container {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   justify-content: center;
   margin: 40vh auto 20px;
   padding: 0;
@@ -12,7 +10,7 @@
     padding-right: 5px;
   }
   .article {
-    width: calc(100% - 50px);
+    width: calc(100% - 40px);
     max-width: 1100px;
     padding: 20px 25px 20px;
 
@@ -47,32 +45,6 @@
   }
 }
 
-.index {
-  position: sticky;
-  top: calc(var(--topbar-height) + 10px);
-
-  flex: none;
-  width: 240px;
-  height: fit-content;
-  max-height: max(60vh, 300px);
-  margin-top: 10px;
-  padding: 20px 0px;
-  border-radius: 15px 15px;
-
-  overflow: auto;
-
-  background-color: var(--color-background-fronter);
-  box-shadow: var(--shadow-regular);
-  &::-webkit-scrollbar {
-    width: 0px;
-  }
-  @media screen and (max-width: 992px) {
-    position: static;
-
-    display: none;
-
-    width: 0;
-    padding: 0;
-    overflow: hidden;
-  }
+.container::-webkit-scrollbar {
+  width: 0px;
 }

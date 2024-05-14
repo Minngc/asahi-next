@@ -4,7 +4,7 @@ import styles from "./index.module.scss";
 
 const MenuIconToCloseIcon = (props: {
   className?: string;
-  onClick: MouseEventHandler<HTMLDivElement> | undefined;
+  onClick?: MouseEventHandler<HTMLDivElement> | undefined;
   change: boolean;
   size?: number;
 }) => {
