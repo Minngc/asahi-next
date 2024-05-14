@@ -1,5 +1,4 @@
 {
-  "extends": "@tsconfig/node20/tsconfig.json",
   "ts-node": {
     "transpileOnly": true,
     "files": true,
@@ -8,7 +7,7 @@
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "allowImportingTsExtensions":true,
+    "allowImportingTsExtensions": true,
     "skipLibCheck": true,
     "strict": true,
     "downlevelIteration": true,
@@ -26,7 +25,7 @@
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
       "@public/*": ["./public/*"],
-      "@external/*":["./external/*"]
+      "@external/*": ["./external/*"]
     },
     "plugins": [
       {
@@ -39,7 +38,7 @@
     "**/*.ts",
     "**/*.tsx",
     "next.config.js",
-    ".next/types/**/*.ts"
-, "script.mjs"  ],
+    ".next/types/**/*.ts",
+  ],
   "exclude": ["node_modules"]
 }
